@@ -24,7 +24,7 @@ const handleClick = async () => {
             {{ title }}
         </h2>
         <div class="flex justify-between">
-            <input class="w-full border-y-2 border-t-black" type="text" :placeholder="placeholder" v-model="taskName" />
+            <input class="w-full border-y-2 border-t-black bg-grayMain" type="text" :placeholder="placeholder" v-model="taskName" />
             <button @click="handleClick"
                 class="bg-black text-white px-8 pt-1 pb-2 transition-background hover:bg-yellowMain hover:text-black hover:scale-105 active:scale-100">
                 {{ buttonTitle }}

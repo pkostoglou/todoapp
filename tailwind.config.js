@@ -16,7 +16,8 @@ export default {
         'normal': '17px',
       },
       colors: {
-        yellowMain: '#FFED00'
+        yellowMain: '#FFED00',
+        grayMain: "#F1F1F2"
       },
       transitionProperty: {
         'background': 'background-color',
