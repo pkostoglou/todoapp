@@ -21,6 +21,9 @@ export default {
       transitionProperty: {
         'background': 'background-color',
       },
+      fontFamily: {
+        'main':['Open Sans']
+      }
     },
   },
   variants: {
@@ -28,6 +31,16 @@ export default {
       backgroundColor: ['hover', 'focus'],
     },
   },
-  plugins: [],
+  plugins: [function ({ addUtilities }) {
+    const newUtilities = {
+      '.completed': {
+        fontStyle: 'italic',
+        fontWeight: 'bold',
+        textDecoration: 'line-through'
+      },
+    };
+
+    addUtilities(newUtilities, ['responsive', 'hover']);
+  },],
 }
 
