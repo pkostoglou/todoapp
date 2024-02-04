@@ -9,7 +9,24 @@ export default {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        'titles': '24px',
+        'label': '20px',
+        'normal': '17px',
+      },
+      colors: {
+        yellowMain: '#FFED00'
+      },
+      transitionProperty: {
+        'background': 'background-color',
+      },
+    },
+  },
+  variants: {
+    extend: {
+      backgroundColor: ['hover', 'focus'],
+    },
   },
   plugins: [],
 }
