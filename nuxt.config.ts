@@ -11,4 +11,9 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
   ],
+  runtimeConfig: {
+    public: {
+      BASE_URL: process.env.BASE_URL,
+    },
+  },
 })

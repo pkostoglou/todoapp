@@ -1,16 +1,17 @@
 <script lang="ts" setup>
-const { data: tasks } = await useFetch('https://to-do-kostoglou.titlos.com/todos')
+const runtimeConfig = useRuntimeConfig()
+const { data: tasks } = await useFetch(`${runtimeConfig.public.BASE_URL}/todos`)
 
 //Function that will reload the tasks
 const reloadData = async () => {
-    const response = await $fetch(`https://to-do-kostoglou.titlos.com/todos`, {
+    const response = await $fetch(`${runtimeConfig.public.BASE_URL}/todos`, {
         method: 'GET'
     })
     tasks.value=response
 };
 </script>
 <template>
-    <div class="bg-grayMain min-h-[100vh]">
+    <div class="bg-grayMain min-h-[100vh] font-main">
         <h1 class="text-center text-titles font-bold pt-4 pb-8 bg-white">
             TO DO LIST
         </h1>

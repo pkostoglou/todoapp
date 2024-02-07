@@ -28,11 +28,11 @@ onUnmounted(() => {
 </script>
 <template>
     <div ref="myModalRef" v-if="notificationsStore.message!=''"
-        class="fixed top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 border-2 border-black" :class="closeAnimation?'animate-fadeOut':'animate-fadeIn'"> 
-        <div class="p-2 bg-yellowMain flex justify-end">
+        class="fixed w-[100vw] md:w-auto top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 border-2 border-black rounded-md font-main" :class="closeAnimation?'animate-fadeOut':'animate-fadeIn'"> 
+        <div class="p-2 bg-yellowMain flex justify-end rounded-t-md">
             <button class="font-extrabold hover:scale-105 active:scale-100" @click="() => handleCloseModal()">&#88;</button>
         </div>
-        <p class="p-6 bg-grayMain">
+        <p class="p-6 bg-grayMain rounded-b-md text-center">
             {{ notificationsStore.message }}
         </p>
     </div>
