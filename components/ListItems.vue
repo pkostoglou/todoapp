@@ -38,7 +38,7 @@ const handleTaskClick = async (completed: boolean, id: number) => {
                 <div class="flex justify-between p-2 relative z-10">
                     <p @click="() => handleTaskClick(item.completed, item.id)" class="w-full"
                         :class="item.completed ? 'completed' : ''">{{ item.title }}</p>
-                    <button class="font-extrabold hover:scale-105 active:scale-100 p-2" @click="() => handleDelete(item.id,item.title)">&#88;</button>
+                    <button class="font-extrabold hover:scale-110 active:scale-100 p-2" @click="() => handleDelete(item.id,item.title)">&#88;</button>
                 </div>
                 <div class="bg-yellowMain w-full absolute top-0 z-0 animate-slideRight overflow-hidden"></div>
             </div>
